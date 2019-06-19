@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="author" content="">
+<meta name="description" content="">
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Viavi Directory Listing HTML</title>
+
+<!-- Favicon -->
+<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+<!-- Style Sheets -->
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+<link rel="stylesheet" href="css/animate.css" type="text/css">
+<link rel="stylesheet" href="css/stylesheet.css" type="text/css">
+<link rel="stylesheet" href="css/responsive_style.css" type="text/css">
+<link rel="stylesheet" href="css/color.css" type="text/css">
+
+<!-- Font Awesome Fonts-->
+<!-- <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"> -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<!-- Google Fonts-->
+<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700,800%7CMontserrat:400,700" rel="stylesheet" type="text/css">
+</head>
+<body data-gr-c-s-loaded="true">
+<div id="vfx_loader_block" style="display: none;">
+  <div class="vfx-loader-item"> <img src="images/loading.gif" alt=""> </div>
+</div>
+<div id="logo-header" data-spy="affix" data-offset-top="500" class="affix-top">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-3 col-xs-9">
+        <div id="logo"> <a href="index.html"><img src="images/logo.png" alt="logo"></a> </div>
+      </div>
+      <div class="col-sm-9 text-right">
+        <nav class="navbar navbar-default">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#thrift-1" aria-expanded="false"> <span class="sr-only">Toggle Navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+          </div>
+          <div class="collapse navbar-collapse" id="thrift-1"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"></a>
+            <div id="nav_menu_list">
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li class="dash"><a href="dashboard.html">Dashboard </a> 
+                <li><a href="contact.html">Contact Us</a></li>
+                <li class="btn_item">
+				    <ul>
+						<li>
+						  <button class="btn_login" data-toggle="modal" data-target="#login">Login</button>
+						</li>
+						<li>
+						  <button class="btn_register" data-toggle="modal" data-target="#register">Register</button>
+						</li>
+				    </ul>	
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="breadcrum-inner-block">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 text-center">
+        <div class="breadcrum-inner-header">
+          <h1>Submit Leads</h1>
+          <a href="index.html">Home</a> <i class="fa fa-circle"></i> <a href="dashboard.html"><span>Submit Leads</span></a> </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="dashboard_inner_block">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <div class="col-md-12 all-categorie-list-title bt_heading_3">
+          <h1>Submit <span>Leads</span></h1>
+          <div class="blind line_1"></div>
+          <div class="flipInX-1 blind icon"><span class="icon"><i class="fa fa-stop"></i>&nbsp;&nbsp;<i class="fa fa-stop"></i></span></div>
+          <div class="blind line_2"></div>
+        </div>
+        <div class="row">
+          <div class="col-md-3 col-sm-4 col-xs-12">
+            <div id="leftcol_item">
+              <div class="user_dashboard_pic"> <img alt="user photo" src="images/user-profile.png"> <span class="user-photo-action">Click here to Reupload</span> </div>
+            </div>
+            <div class="dashboard_nav_item">
+              <ul>
+                <li><a href="dashboard.html"><i class="fa fa-tachometer"></i> Dashboard</a></li>
+                <li class="active"><a href="listing_submit.html"><i class="fa fa-pencil"></i> Submit Leads</a></li>
+                <li><a href="edit_profile.html"><i class="fa fa-user"></i> Edit Profile</a></li>
+                <li><a href="my_listing.html"><i class="fa fa-list-ul"></i> My Leads</a></li>
+                <li><a href="change_password.html"><i class="fa fa-key"></i> Change Password</a></li>
+                <li><a href="#"><i class="fa fa-sign-out"></i> Logout</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-9 col-sm-8 col-xs-12">
+            <div class="submit_listing_box">
+              <h3>Description</h3>
+              <form class="form-alt">
+                <div class="form-group">
+                  <label>Title :-</label>
+                  <input placeholder="Title" class="form-control" type="text" id="title" data-parsley-required>
+                </div>
+                <div class="form-group">
+                  <label>Lead Description :-</label>
+                  <textarea placeholder="Lead description..." class="form-control" rows="5" id="description" data-parsley-required></textarea>
+                </div>
+              </form>
+            </div>
+            <div class="submit_listing_box">
+              <h3>Attributes</h3>
+              <form class="form-alt">
+                <div class="row">
+                  <div class="form-group col-md-6 col-sm-12 col-xs-12">
+                    <label>Category :-</label>
+                    <input placeholder="Category" class="form-control" type="text" id="Category" data-parsley-required>
+
+                  </div>
+                  <div class="form-group col-md-6 col-sm-12 col-xs-12">
+                    <label>Sub Category :-</label>
+                    <input placeholder="Sub Category" class="form-control" type="text" id="sub_cat" data-parsley-required>
+
+                  </div>
+                  
+                  <div class="form-group col-md-6 col-sm-12 col-xs-12">
+                    <label>Price :-</label>
+                    <input placeholder="Price" class="form-control" type="text" id="price" data-parsley-type="number" data-parsley-required>
+                  </div>
+                  <div class="form-group col-md-6 col-sm-12 col-xs-12">
+                    <label>Features :-</label>
+                    <input placeholder="Features" class="form-control" type="text" id="features" data-parsley-required>
+                  </div>
+                  <div class="form-group col-md-6 col-sm-12 col-xs-12">
+                    <label>Tag :-</label>
+                    <input placeholder="Tag" class="form-control" type="text" id="tag"data-parsley-required>
+                  </div>
+                  <div class="form-group col-md-6 col-sm-12 col-xs-12">
+                    <label>Score :-</label>
+                    <input placeholder="Score" class="form-control" type="text" id="score" data-parsley-type="number" data-parsley-required>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="submit_listing_box">
+              <h3>Address</h3>
+              <form class="form-alt">
+                <div class="row">
+                  <div class="form-group col-md-4 col-sm-6 col-xs-6">
+                    <label>State :-</label>
+                    <input class="form-control" type="text">
+                  </div>
+                  <div class="form-group col-md-4 col-sm-6 col-xs-6">
+                    <label>City :-</label>
+                    <input class="form-control" type="text">
+                  </div>
+                  <div class="form-group col-md-4 col-sm-6 col-xs-6">
+                    <label>Country :-</label>
+                    <input class="form-control" type="text">
+                  </div>
+                  <div class="form-group col-md-4 col-sm-6 col-xs-6">
+                  <label>Full Address :-</label>
+                  <textarea placeholder="Complete Address..." class="form-control" rows="5"></textarea>
+                </div>
+                  
+                </div>
+              </form>
+            </div>
+            <input type="checkbox" name="vehicle1" value="Bike"> Submit leads for same user<br><br>
+            <div class="submit_listing_box">
+              <h3>Details</h3>
+              <form class="form-alt">
+                <div class="row">
+                  <div class="form-group col-md-4 col-sm-6 col-xs-6">
+                    <label>Company Name :-</label>
+                    <input class="form-control" type="text">
+                  </div>
+                  <div class="form-group col-md-4 col-sm-6 col-xs-6">
+                    <label>City :-</label>
+                    <input class="form-control" type="text">
+                  </div>
+                  <div class="form-group col-md-4 col-sm-6 col-xs-6">
+                    <label>Country :-</label>
+                    <input class="form-control" type="text">
+                  </div>
+                  <div class="form-group col-md-4 col-sm-6 col-xs-6">
+                  <label>Full Address :-</label>
+                  <textarea placeholder="Complete Address..." class="form-control" rows="5"></textarea>
+                </div>
+                  
+                </div>
+              </form>
+            </div>
+            <!-- <div class="submit_listing_box">
+              <h3>Map Position</h3>
+              <form class="form-alt">
+                <div class="row">
+                  <div class="form-group col-md-6 col-sm-6- col-xs-12">
+                    <label>Latitude :-</label>
+                    <input placeholder="Latitude" class="form-control" type="text">
+                  </div>
+                  <div class="form-group col-md-6 col-sm-6- col-xs-12">
+                    <label>Lontgitude :-</label>
+                    <input placeholder="Lontgitude" class="form-control" type="text">
+                  </div>
+                </div>
+              </form>
+              <div id="location-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d60470630.45233501!2d73.17308624999998!3d22.32210265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1499682555819" allowfullscreen=""></iframe>
+              </div>
+            </div> -->
+            <!-- <div class="submit_listing_box">
+              <h3>Gallery</h3>
+              <div class="fileupload_block">
+                <input type="file" name="fileupload" id="fileupload">
+                <div class="fileupload_img"> <img src="images/add_image.png" alt="add image"> </div>
+              </div>
+              <div class="clearfix"></div>
+            </div> -->
+            <!-- <div class="submit_listing_box">
+              <h3>Amenities</h3>
+              <div class="amenities_block">
+                <ul class="detail-amenities">
+                  <li>
+                    <div class="checkbox checkbox-success">
+                      <input class="styled" value="5" id="checkbox-1" name="checkbox" type="checkbox">
+                      <label class="control-label" for="checkbox-1">WiFi</label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="checkbox checkbox-success">
+                      <input class="styled" value="5" id="checkbox-2" name="checkbox" type="checkbox">
+                      <label class="control-label" for="checkbox-2">Parking</label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="checkbox checkbox-success">
+                      <input class="styled" value="5" id="checkbox-3" name="checkbox" type="checkbox">
+                      <label class="control-label" for="checkbox-3">Vine</label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="checkbox checkbox-success">
+                      <input class="styled" value="5" id="checkbox-4" name="checkbox" type="checkbox">
+                      <label class="control-label" for="checkbox-4">Terrace</label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="checkbox checkbox-success">
+                      <input class="styled" value="5" id="checkbox-5" name="checkbox" type="checkbox">
+                      <label class="control-label" for="checkbox-5">Bar</label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="checkbox checkbox-success">
+                      <input class="styled" value="5" id="checkbox-6" name="checkbox" type="checkbox">
+                      <label class="control-label" for="checkbox-6">Take Away Coffee</label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="checkbox checkbox-success">
+                      <input class="styled" value="5" id="checkbox-7" name="checkbox" type="checkbox">
+                      <label class="control-label" for="checkbox-7">Catering</label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="checkbox checkbox-success">
+                      <input class="styled" value="5" id="checkbox-8" name="checkbox" type="checkbox">
+                      <label class="control-label" for="checkbox-8">Raw Food</label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="checkbox checkbox-success">
+                      <input class="styled" value="5" id="checkbox-9" name="checkbox" type="checkbox">
+                      <label class="control-label" for="checkbox-9">Delivery</label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="checkbox checkbox-success">
+                      <input class="styled" value="5" id="checkbox-10" name="checkbox" type="checkbox">
+                      <label class="control-label" for="checkbox-10">No-smoking room</label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="checkbox checkbox-success">
+                      <input class="styled" value="5" id="checkbox-11" name="checkbox" type="checkbox">
+                      <label class="control-label" for="checkbox-11">WiFi</label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="checkbox checkbox-success">
+                      <input class="styled" value="5" id="checkbox-12" name="checkbox" type="checkbox">
+                      <label class="control-label" for="checkbox-12">Parking</label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="checkbox checkbox-success">
+                      <input class="styled" value="5" id="checkbox-13" name="checkbox" type="checkbox">
+                      <label class="control-label" for="checkbox-13">Vine</label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="checkbox checkbox-success">
+                      <input class="styled" value="5" id="checkbox-14" name="checkbox" type="checkbox">
+                      <label class="control-label" for="checkbox-14">Terrace</label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="checkbox checkbox-success">
+                      <input class="styled" value="5" id="checkbox-15" name="checkbox" type="checkbox">
+                      <label class="control-label" for="checkbox-15">Bar</label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="checkbox checkbox-success">
+                      <input class="styled" value="5" id="checkbox-16" name="checkbox" type="checkbox">
+                      <label class="control-label" for="checkbox-16">Take Away Coffee</label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="checkbox checkbox-success">
+                      <input class="styled" value="5" id="checkbox-17" name="checkbox" type="checkbox">
+                      <label class="control-label" for="checkbox-17">Catering</label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="checkbox checkbox-success">
+                      <input class="styled" value="5" id="checkbox-18" name="checkbox" type="checkbox">
+                      <label class="control-label" for="checkbox-18">Raw Food</label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="checkbox checkbox-success">
+                      <input class="styled" value="5" id="checkbox-19" name="checkbox" type="checkbox">
+                      <label class="control-label" for="checkbox-19">Delivery</label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="checkbox checkbox-success">
+                      <input class="styled" value="5" id="checkbox-20" name="checkbox" type="checkbox">
+                      <label class="control-label" for="checkbox-20">No-smoking room</label>
+                    </div>
+                  </li>                  
+                </ul>
+				<div class="clearfix"></div>
+              </div>
+            </div> -->
+            <div class="from-list-lt">
+              <div class="form-group">
+                <button class="btn" type="submit" id="suubmit_lead">Submit Leads</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<footer class="site-footer footer-map">
+  <div class="footer-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 col-sm-6 col-xs-12">
+          <h2>About Us</h2>
+          <hr>
+          <p class="about-lt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer justo lectus, consectetur quis nisi vitae, Nunc eget ultrices ligula.</p>
+          <a href="about.html" class="btn-primary-link more-detail"><i class="fa fa-hand-o-right"></i> Read More</a>
+          <h2>Follow Us</h2>
+          <hr>
+          <ul class="social-icons">
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+            <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
+            <li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12">
+          <h2>Recent Listing</h2>
+          <hr>
+          <ul class="widget-news-simple">
+            <li>
+              <div class="news-thum"><a href="#"><img src="images/new-thum-1.png" alt="new-thum-1"></a></div>
+              <div class="news-text-thum">
+                <h6><a href="listing_detail.html">Hello Directory Listing</a></h6>
+                <p>Phasellus ut condimentum diam, eget tempus lorem...</p>
+                <div>Price: $117</div>
+              </div>
+            </li>
+            <li>
+              <div class="news-thum"><a href="#"><img src="images/new-thum-1.png" alt="new-thum-1"></a></div>
+              <div class="news-text-thum">
+                <h6><a href="listing_detail.html">Hello Directory Listing</a></h6>
+                <p>Phasellus ut condimentum diam, eget tempus lorem...</p>
+                <div>Price: $117</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12">
+          <h2>Useful links</h2>
+          <hr>
+          <ul class="use-slt-link">
+            <li><a href="#"><i class="fa fa-hand-o-right"></i>&nbsp;&nbsp;Privacy &amp; Policy</a></li>
+            <li><a href="#"><i class="fa fa-hand-o-right"></i>&nbsp;&nbsp;Payment Method</a></li>
+            <li><a href="#"><i class="fa fa-hand-o-right"></i>&nbsp;&nbsp;Sitemap</a></li>
+            <li><a href="#"><i class="fa fa-hand-o-right"></i>&nbsp;&nbsp;Support</a></li>
+            <li><a href="#"><i class="fa fa-hand-o-right"></i>&nbsp;&nbsp;Terms &amp; Condition</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12">
+          <h2>Have you any Query?</h2>
+          <hr>
+          <form class="form-alt">
+            <div class="form-group">
+              <input type="text" placeholder="Name :-" required="" class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="text" placeholder="Email :-" required="" class="form-control">
+            </div>
+            <div class="form-group">
+              <textarea placeholder="Message :-" required="" class="form-control"></textarea>
+            </div>
+            <div class="form-group">
+              <button type="submit" class="btn-quote">Send Now</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12">
+          <p class="text-xs-center">Copyright © 2019 All Rights Reserved.</p>
+        </div>
+        <div><a href="#" class="scrollup">Scroll</a></div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!--================================ Login and Register Forms ===========================================--> 
+
+<!-- login form -->
+<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="listing-modal-1 modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h4 class="modal-title" id="myModalLabel"> Login</h4>
+      </div>
+      <div class="modal-body">
+        <div class="listing-login-form">
+          <form action="#">
+            <div class="listing-form-field"> <i class="fa fa-user blue-1"></i>
+              <input class="form-field bgwhite mobile" type="text"  placeholder="Mobile">
+            </div>
+            <div class="listing-form-field"> <i class="fa fa-lock blue-1"></i>
+              <input class="form-field bgwhite password" type="password"  placeholder="Password"><br>
+            </div>
+            <div class="modal-header">
+        <a class="modal-title " data-toggle="modal" data-target="#login" id="myModalLabel" href="">Login via otp</a>
+
+      </div>  
+            <br><div class="listing-form-field"> <i class="fa fa-lock blue-1"></i>
+              <input class="form-field bgwhite otp" type="password"  placeholder="OTP"><br>
+            </div>
+
+            <div class="listing-form-field clearfix margin-top-20 margin-bottom-20">
+              <a class="send_otp" href="#">Send Otp</a> </div>
+              
+            <div class="listing-form-field">
+              <input class="submit" type="submit" value="login">
+            </div>
+          </form>
+          <div class="bottom-links">
+            <p>Not a Member?<a href="#">Create Account</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- registration form -->
+<div class="modal fade" id="register" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="listing-modal-1 modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h4 class="modal-title" id="myModalLabel2">Registration</h4>
+      </div>
+      <div class="modal-body">
+        <div class="listing-register-form">
+          <form action="#">
+            <div class="listing-form-field"> <i class="fa fa-user blue-1"></i>
+              <input class="form-field bgwhite" type="text" name="user_name" placeholder="Name">
+            </div>
+            <div class="listing-form-field"> <i class="fa fa-envelope blue-1"></i>
+              <input class="form-field bgwhite" type="email" name="user_email" placeholder="Email">
+            </div>
+            <div class="listing-form-field"> <i class="fa fa-lock blue-1"></i>
+              <input class="form-field bgwhite" type="password" name="user_password" placeholder="Password">
+            </div>
+            <div class="listing-form-field"> <i class="fa fa-lock blue-1"></i>
+              <input class="form-field bgwhite" type="password" name="user_confirm_password" placeholder="Confirm Password">
+            </div>
+            <div class="listing-form-field clearfix margin-top-20 margin-bottom-20 login_form_text_center">
+              <input type="checkbox" id="checkbox-1-2" class="regular-checkbox">
+              <label for="checkbox-1-2"></label>
+              <label class="checkbox-lable">i agree with</label> &nbsp; <a href="#">Terms &amp; Conditions</a> </div>
+            <div class="listing-form-field">
+              <input class="submit" type="submit" value="create account">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Scripts --> 
+<script src="js/jquery-2.2.4.min.js"></script> 
+<script src="js/bootstrap.min.js"></script> 
+<script src="js/jquery_custom.js"></script> 
+<script src="js/log_in.js"></script> 
+<script src="js/submit_lead.js"></script> 
+<script src="js/register.js"></script> 
+<script src="js/register_validation.js"></script> 
+
+<script src="js/otp.js"></script> 
+<script src="js/basic.js"></script> 
+
+
+</body>
+</html>

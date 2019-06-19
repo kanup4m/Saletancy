@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="author" content="">
+<meta name="description" content="">
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Saletancy</title>
+
+<!-- Favicon -->
+<!-- Style Sheets -->
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+<link rel="stylesheet" href="css/animate.css" type="text/css">
+<link rel="stylesheet" href="css/stylesheet.css" type="text/css">
+<link rel="stylesheet" href="css/responsive_style.css" type="text/css">
+<link rel="stylesheet" href="css/color.css" type="text/css">
+<link rel="stylesheet" href="css/toaster.css" type="text/css">
+
+<!-- <link rel="stylesheet" type="text/css" href="css/parsley.min.css"> -->
+<!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.11.3/build/css/alertify.min.css"/>
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.11.3/build/css/themes/default.min.css"/> -->
+<!-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css"> -->
+
+
+<!-- Font Awesome Fonts-->
+<!-- <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"> -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<!-- Google Fonts-->
+<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700,800%7CMontserrat:400,700" rel="stylesheet" type="text/css">
+</head>
+<body>
+<body>
+<div id="vfx_loader_block" style="display: none;">
+  <div class="vfx-loader-item"> <img src="images/loading.gif" alt=""> </div>
+</div>
+<div id="logo-header" data-spy="affix" data-offset-top="500" class="affix">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-3 col-xs-9">
+        <div id="logo"> <a href="index.html"><img src="images/logo.png" alt="logo"></a> </div>
+      </div>
+      <div class="col-sm-9 text-right">
+        <nav class="navbar navbar-default">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#thrift-1" aria-expanded="false"> <span class="sr-only">Toggle Navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+          </div>
+          <div class="collapse navbar-collapse" id="thrift-1"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"></a>
+            <div id="nav_menu_list">
+              <ul>
+                <li class="active"><a href="index.html">Home</a></li>
+                <!-- <li><a href="about.html">About</a></li> -->
+                <li><a href="categories.html">Categories</a></li>
+                <li class="dash"><a href="dashboard.html">Dashboard </a> 
+                </li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li class="btn_item">
+            <ul>
+            <li>
+              <button class="btn_login" data-toggle="modal" data-target="#login">Login</button>
+            </li>
+            <li>
+              <button class="btn_register" data-toggle="modal" data-target="#register">Register</button>
+            </li>
+            </ul> 
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="location-map-block" style="display: none;">
+  <div id="location-homemap-block"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-lg-12">
+        <div id="location-link-item">
+          <button id="map_list"><i class="fa fa-angle-double-up"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="slider-banner-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 text-center">
+        <div id="home-slider-item"> <span class="helpyou_item">We <span>Help</span> You to</span>
+          <h1>AMAZING <span>CLASSIFIED</span> HTML <span>TEMPLATE</span></h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+        </div>
+        <div id="search-categorie-item-block">
+          <form id="categorie-search-form">
+            <h1>Search any Business Listing</h1>
+            <div class="col-sm-9 col-md-10 nopadding">
+              <div id="search-input">
+                <div class="col-sm-3 nopadding">
+                  <select id="location-search-list" class="form-control">
+                    <option>All Categories</option>
+                    <option>Business</option>
+                    <option>Free Lancing</option>
+                    <option>Web Development</option>
+                    <option>Web Designing</option>
+                  </select>
+                </div>
+                <div class="col-sm-9 nopadding">
+                  <div class="form-group">
+                    <input id="location-search-data-store" class="form-control" name="search" placeholder="Enter Keyword" required="">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3 col-md-2 text-right nopadding-right">
+              <div id="location-search-btn">
+                <button type="submit" id="search-btn"><i class="fa fa-search"></i>Search</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div id="location_slider_item_block">
+          <button id="map_mark"><i class="fas fa-rupee-sign"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="feature-item_listing_block">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 text-center">
+        <div class="col-md-12 feature-item-listing-heading bt_heading_3">
+          <h1>Featured <span>Leads</span></h1>
+          <div class="blind line_1"></div>
+          <div class="flipInX-1 blind icon"><span class="icon"><i class="fa fa-stop"></i>&nbsp;&nbsp;<i class="fa fa-stop"></i></span></div>
+          <div class="blind line_2"></div>
+        </div>
+        <div class="row">
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="feature-item-container-box listing-item">
+              <div class="feature-title-item">
+                <h1>Footwear</h1>
+                <img src="images/s1.jpg" alt="img1"> </div>
+              <div class="hover-overlay">
+                <div class="hover-overlay-inner">                  
+                  <ul class="listing-links">
+                    <li><a href="#"><i class="fa fa-heart green-1 "></i></a></li>
+                    <li><a href="#"><i class="fa fa-map-marker blue-1"></i></a></li>
+                    <li><a href="#"><i class="fa fa-share yallow-1"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="feature-box-text">                
+        <h3><a href="listing_detail.html">BELLA TOES</a></h3>
+                <a href="#"><i class="fas fa-id-card-alt"></i> 23df554t4td</a>
+                <p>The adidas Erdiga 3.0 shoes for men crafted with Mesh-Synthetic upper for added comfort. The IMEVA midsole provides optimized cushioning and rebounding. The outsole is made of high durable rubber.</p>
+              </div>
+              <div class="feature-item-location">
+                <h2><i class="fas fa-rupee-sign"></i> 3800</h2>
+                <span> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> </span> </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="feature-item-container-box listing-item">
+              <div class="feature-title-item">
+                <h1>Footwear</h1>
+                <img src="images/s2.jpg" alt="img2"> </div>
+              <div class="hover-overlay">
+                <div class="hover-overlay-inner">                  
+                  <ul class="listing-links">
+                    <li><a href="#"><i class="fa fa-heart green-1 "></i></a></li>
+                    <li><a href="#"><i class="fa fa-map-marker blue-1"></i></a></li>
+                    <li><a href="#"><i class="fa fa-share yallow-1"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="feature-box-text">
+                <h3><a href="listing_detail.html">CHIKKU LOAFERS</a></h3>
+                <a href="#"><i class="fas fa-id-card-alt"></i> 23df554t4td</a>
+                <p>The adidas Erdiga 3.0 shoes for men crafted with Mesh-Synthetic upper for added comfort. The IMEVA midsole provides optimized cushioning and rebounding. The outsole is made of high durable rubber.</p>
+              </div>
+              <div class="feature-item-location">
+                <h2><i class="fas fa-rupee-sign"></i> 1200</h2>
+                <span> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> </span> </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="feature-item-container-box listing-item">
+              <div class="feature-title-item">
+                <h1>Footwear</h1>
+                <img src="images/s6.jpg" alt="img3"> </div>
+              <div class="hover-overlay">
+                <div class="hover-overlay-inner">                  
+                  <ul class="listing-links">
+                    <li><a href="#"><i class="fa fa-heart green-1 "></i></a></li>
+                    <li><a href="#"><i class="fa fa-map-marker blue-1"></i></a></li>
+                    <li><a href="#"><i class="fa fa-share yallow-1"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="feature-box-text">
+                <h3><a href="listing_detail.html">CATWALK FLATS</a></h3>
+                <a href="#"><i class="fas fa-id-card-alt"></i> 23df554t4td</a>
+                <p>The adidas Erdiga 3.0 shoes for men crafted with Mesh-Synthetic upper for added comfort. The IMEVA midsole provides optimized cushioning and rebounding. The outsole is made of high durable rubber.</p>
+              </div>
+              <div class="feature-item-location">
+                <h2><i class="fas fa-rupee-sign"></i> 2500</h2>
+                <span> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="far fa-star-o"></i> </span> </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="feature-item-container-box listing-item">
+              <div class="feature-title-item">
+                <h1>Footwear</h1>
+                <img src="images/s3.jpg" alt="img4"> </div>
+              <div class="hover-overlay">
+                <div class="hover-overlay-inner">                  
+                  <ul class="listing-links">
+                    <li><a href="#"><i class="fa fa-heart green-1 "></i></a></li>
+                    <li><a href="#"><i class="fa fa-map-marker blue-1"></i></a></li>
+                    <li><a href="#"><i class="fa fa-share yallow-1"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="feature-box-text">
+                <h3><a href="listing_detail.html">(SRV) SNEAKERS</a></h3>
+                <a href="#"><i class="fas fa-id-card-alt"></i> 23df554t4td</a>
+                <p>The adidas Erdiga 3.0 shoes for men crafted with Mesh-Synthetic upper for added comfort. The IMEVA midsole provides optimized cushioning and rebounding. The outsole is made of high durable rubber.</p>
+              </div>
+              <div class="feature-item-location">
+                <h2><i class="fas fa-rupee-sign"></i> 3000</h2>
+                <span> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="far fa-star-o"></i> </span> </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="feature-item-container-box listing-item">
+              <div class="feature-title-item">
+                <h1>Footwear</h1>
+                <img src="images/s7.jpg" alt="img5"> </div>
+              <div class="hover-overlay">
+                <div class="hover-overlay-inner">                  
+                  <ul class="listing-links">
+                    <li><a href="#"><i class="fa fa-heart green-1 "></i></a></li>
+                    <li><a href="#"><i class="fa fa-map-marker blue-1"></i></a></li>
+                    <li><a href="#"><i class="fa fa-share yallow-1"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="feature-box-text">
+                <h3><a href="listing_detail.html">RUNNING SHOES</a></h3>
+                <a href="#"><i class="fas fa-id-card-alt"></i> 23df554t4td</a>
+                <p>The adidas Erdiga 3.0 shoes for men crafted with Mesh-Synthetic upper for added comfort. The IMEVA midsole provides optimized cushioning and rebounding. The outsole is made of high durable rubber.</p>
+              </div>
+              <div class="feature-item-location">
+                <h2><i class="fas fa-rupee-sign"></i> 2150</h2>
+                <span> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> </span> </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="feature-item-container-box listing-item">
+              <div class="feature-title-item">
+                <h1>Footwear</h1>
+                <img src="images/s9.jpg" alt="img6"> </div>
+              <div class="hover-overlay">
+                <div class="hover-overlay-inner">                  
+                  <ul class="listing-links">
+                    <li><a href="#"><i class="fa fa-heart green-1 "></i></a></li>
+                    <li><a href="#"><i class="fa fa-map-marker blue-1"></i></a></li>
+                    <li><a href="#"><i class="fa fa-share yallow-1"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="feature-box-text">
+                <h3><a href="listing_detail.html">BANK SNEAKERS</a></h3>
+                <a href="#"><i class="fas fa-id-card-alt"></i> 23df554t4td</a>
+                <p>The adidas Erdiga 3.0 shoes for men crafted with Mesh-Synthetic upper for added comfort. The IMEVA midsole provides optimized cushioning and rebounding. The outsole is made of high durable rubber.</p>
+              </div>
+              <div class="feature-item-location">
+                <h2><i class="fas fa-rupee-sign"></i> 2000</h2>
+                <span> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> </span> </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="feature-item-container-box listing-item">
+              <div class="feature-title-item">
+                <h1>Footwear</h1>
+                <img src="images/s8.jpg" alt="img7"> </div>
+              <div class="hover-overlay">
+                <div class="hover-overlay-inner">                  
+                  <ul class="listing-links">
+                    <li><a href="#"><i class="fa fa-heart green-1 "></i></a></li>
+                    <li><a href="#"><i class="fa fa-map-marker blue-1"></i></a></li>
+                    <li><a href="#"><i class="fa fa-share yallow-1"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="feature-box-text">
+                <h3><a href="listing_detail.html">SUKUN CASUALS</a></h3>
+                <a href="#"><i class="fas fa-id-card-alt"></i> 23df554t4td</a>
+                <p>The adidas Erdiga 3.0 shoes for men crafted with Mesh-Synthetic upper for added comfort. The IMEVA midsole provides optimized cushioning and rebounding. The outsole is made of high durable rubber.</p>
+              </div>
+              <div class="feature-item-location">
+                <h2><i class="fas fa-rupee-sign"></i> 3800</h2>
+                <span> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> </span> </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="feature-item-container-box listing-item">
+              <div class="feature-title-item">
+                <h1>Footwear</h1>
+                <img src="images/s4.jpg" alt="img8"> </div>
+              <div class="hover-overlay">
+                <div class="hover-overlay-inner">                  
+                  <ul class="listing-links">
+                    <li><a href="#"><i class="fa fa-heart green-1 "></i></a></li>
+                    <li><a href="#"><i class="fa fa-map-marker blue-1"></i></a></li>
+                    <li><a href="#"><i class="fa fa-share yallow-1"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="feature-box-text">
+                <h3><a href="listing_detail.html">SHUBERRY HEELS</a></h3>
+                <a href="#"><i class="fas fa-id-card-alt"></i> 23df554t4td</a>
+                <p>The adidas Erdiga 3.0 shoes for men crafted with Mesh-Synthetic upper for added comfort. The IMEVA midsole provides optimized cushioning and rebounding. The outsole is made of high durable rubber.</p>
+              </div>
+              <div class="feature-item-location">
+                <h2><i class="fas fa-rupee-sign"></i> 1500</h2>
+                <span> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> </span> </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="vfx-counter-block">
+  <div class="vfx-item-container-slope vfx-item-bottom-slope vfx-item-left-slope"></div>
+  <div class="container">
+    <div class="vfx-item-counter-up">
+      <div class="row">
+        <div class="col-md-3 col-sm-6 col-xs-12">
+          <div class="vfx-item-countup">
+            <div class="vfx-item-black-top-arrow"><i class="fa fa-file"></i></div>
+            <div id="count-1" class="vfx-coutter-item count_number vfx-item-count-up">496</div>
+            <div class="counter_text">Listings</div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12">
+          <div class="vfx-item-countup">
+            <div class="vfx-item-black-top-arrow"><i class="fa fa-users"></i></div>
+            <div id="count-2" class="vfx-coutter-item count_number vfx-item-count-up">244</div>
+            <div class="counter_text">Users</div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12">
+          <div class="vfx-item-countup">
+            <div class="vfx-item-black-top-arrow"><i class="fa fa-th"></i></div>
+            <div id="count-3" class="vfx-coutter-item count_number vfx-item-count-up">96</div>
+            <div class="counter_text">Categories</div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12">
+          <div class="vfx-item-countup last-countup">
+            <div class="vfx-item-black-top-arrow"><i class="fa fa-th-list"></i></div>
+            <div id="count-4" class="vfx-coutter-item count_number vfx-item-count-up">274</div>
+            <div class="counter_text">Listings Types</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="recent-product-item-listing">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 text-center">
+        <div class="col-md-12 recent-item-listing-heading bt_heading_3">
+          <h1>Recent <span>Leads</span></h1>
+          <div class="blind line_1"></div>
+          <div class="flipInX-1 blind icon"><span class="icon"><i class="fa fa-stop"></i>&nbsp;&nbsp;<i class="fa fa-stop"></i></span></div>
+          <div class="blind line_2"></div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-sm-6 col-xs-12">
+            <div class="recent-listing-box-container-item">
+              <div class="col-md-6 col-sm-12 nopadding">
+                <div class="recent-listing-box-image">
+                  <h1>Googles</h1>
+                  <img src="images/g1.jpg" alt="img1"> </div>
+                <div class="hover-overlay">
+                  <div class="hover-overlay-inner">
+                    <ul class="listing-links">
+                      <li><a href="#"><i class="fa fa-heart green-1"></i></a></li>
+                      <li><a href="#"><i class="fa fa-map-marker blue-1"></i></a></li>
+                      <li><a href="#"><i class="fa fa-share yallow-1"></i></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-12 nopadding">
+                <div class="recent-listing-box-item">
+                  <div class="listing-boxes-text"> <a href="listing_detail.html">
+                    <h3>Farenheit (Grey) </h3>
+                    </a> <a href="#"><i class="fas fa-id-card-alt"></i> 23df554t4td</a>
+                    <p>Goggles, or safety glasses, are forms of protective eyewear that usually enclose or protect the area surrounding the eye in order to prevent particulates, water or chemicals from striking the eyes. </p>
+                  </div>
+                  <div class="recent-feature-item-rating">
+                    <h2><i class="fas fa-rupee-sign"></i> 575</h2>
+                    <span> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> </span> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-6 col-xs-12">
+            <div class="recent-listing-box-container-item">
+              <div class="col-md-6 col-sm-12 nopadding">
+                <div class="recent-listing-box-image">
+                  <h1>Googles</h1>
+                  <img src="images/g2.jpg" alt="img1"> </div>
+                <div class="hover-overlay">
+                  <div class="hover-overlay-inner">
+                    <ul class="listing-links">
+                      <li><a href="#"><i class="fa fa-heart green-1"></i></a></li>
+                      <li><a href="#"><i class="fa fa-map-marker blue-1"></i></a></li>
+                      <li><a href="#"><i class="fa fa-share yallow-1"></i></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-12 nopadding">
+                <div class="recent-listing-box-item">
+                  <div class="listing-boxes-text"> <a href="listing_detail.html">
+                    <h3>Opium (Grey)</h3>
+                    </a> <a href="#"><i class="fas fa-id-card-alt"></i> 23df554t4td</a>
+                    <p>Goggles, or safety glasses, are forms of protective eyewear that usually enclose or protect the area surrounding the eye in order to prevent particulates, water or chemicals from striking the eyes. </p>
+                  </div>
+                  <div class="recent-feature-item-rating">
+                    <h2><i class="fas fa-rupee-sign"></i> 325</h2>
+                    <span> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> </span> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-6 col-xs-12">
+            <div class="recent-lishttps://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.cssting-box-container-item">
+              <div class="col-md-6 col-sm-12 nopadding">
+                <div class="recent-listing-box-image">
+                  <h1>Googles</h1>
+                  <img src="images/g6.jpeg" alt="img1"> </div>
+                <div class="hover-overlay">
+                  <div class="hover-overlay-inner">
+                    <ul class="listing-links">
+                      <li><a href="#"><i class="fa fa-heart green-1"></i></a></li>
+                      <li><a href="#"><i class="fa fa-map-marker blue-1"></i></a></li>
+                      <li><a href="#"><i class="fa fa-share yallow-1"></i></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-12 nopadding">
+                <div class="recent-listing-box-item">
+                  <div class="listing-boxes-text"> <a href="listing_detail.html">
+                    <h3>Kenneth Cole</h3>
+                    </a> <a href="#"><i class="fas fa-id-card-alt"></i> 23df554t4td</a>
+                    <p>Goggles, or safety glasses, are forms of protective eyewear that usually enclose or protect the area surrounding the eye in order to prevent particulates, water or chemicals from striking the eyes. </p>
+                  </div>
+                  <div class="recent-feature-item-rating">
+                    <h2><i class="fas fa-rupee-sign"></i> 132</h2>
+                    <span> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> </span> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-6 col-xs-12">
+            <div class="recent-listing-box-container-item">
+              <div class="col-md-6 col-sm-12 nopadding">
+                <div class="recent-listing-box-image">
+                  <h1>Googles</h1>
+                  <img src="images/g5.jpeg" alt="img1"> </div>
+                <div class="hover-overlay">
+                  <div class="hover-overlay-inner">
+                    <ul class="listing-links">
+                      <li><a href="#"><i class="fa fa-heart green-1"></i></a></li>
+                      <li><a href="#"><i class="fa fa-map-marker blue-1"></i></a></li>
+                      <li><a href="#"><i class="fa fa-share yallow-1"></i></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-12 nopadding">
+                <div class="recent-listing-box-item">
+                  <div class="listing-boxes-text"> <a href="listing_detail.html">
+                    <h3> Aislin Wayfarer
+</h3>
+                    </a> <a href="#"><i class="fas fa-id-card-alt"></i> 23df554t4td</a>
+                    <p>Goggles, or safety glasses, are forms of protective eyewear that usually enclose or protect the area surrounding the eye in order to prevent particulates, water or chemicals from striking the eyes. </p>
+                  </div>
+                  <div class="recent-feature-item-rating">
+                    <h2><i class="fas fa-rupee-sign"></i> 825</h2>
+                    <span> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> </span> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-6 col-xs-12">
+            <div class="recent-listing-box-container-item">
+              <div class="col-md-6 col-sm-12 nopadding">
+                <div class="recent-listing-box-image">
+                  <h1>Googles</h1>
+                  <img src="images/g7.jpeg" alt="img1"> </div>
+                <div class="hover-overlay">
+                  <div class="hover-overlay-inner">
+                    <ul class="listing-links">
+                      <li><a href="#"><i class="fa fa-heart green-1"></i></a></li>
+                      <li><a href="#"><i class="fa fa-map-marker blue-1"></i></a></li>
+                      <li><a href="#"><i class="fa fa-share yallow-1"></i></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-12 nopadding">
+                <div class="recent-listing-box-item">
+                  <div class="listing-boxes-text"> <a href="listing_detail.html">
+                    <h3>Farenheit Oval</h3>
+                    </a> <a href="#"><i class="fas fa-id-card-alt"></i> 23df554t4td</a>
+                    <p>Goggles, or safety glasses, are forms of protective eyewear that usually enclose or protect the area surrounding the eye in order to prevent particulates, water or chemicals from striking the eyes. </p>
+                  </div>
+                  <div class="recent-feature-item-rating">
+                    <h2><i class="fas fa-rupee-sign"></i> 475</h2>
+                    <span> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> </span> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-6 col-xs-12">
+            <div class="recent-listing-box-container-item">
+              <div class="col-md-6 col-sm-12 nopadding">
+                <div class="recent-listing-box-image">
+                  <h1>Googles</h1>
+                  <img src="images/g3.jpg" alt="img1"> </div>
+                <div class="hover-overlay">
+                  <div class="hover-overlay-inner">
+                    <ul class="listing-links">
+                      <li><a href="#"><i class="fa fa-heart green-1"></i></a></li>
+                      <li><a href="#"><i class="fa fa-map-marker blue-1"></i></a></li>
+                      <li><a href="#"><i class="fa fa-share yallow-1"></i></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-12 nopadding">
+                <div class="recent-listing-box-item">
+                  <div class="listing-boxes-text"> <a href="listing_detail.html">
+                    <h3>Azmani Round </h3>
+                    </a> <a href="#"><i class="fas fa-id-card-alt"></i> 23df554t4td</a>
+                    <p>Goggles, or safety glasses, are forms of protective eyewear that usually enclose or protect the area surrounding the eye in order to prevent particulates, water or chemicals from striking the eyes. </p>
+                  </div>
+                  <div class="recent-feature-item-rating">
+                    <h2><i class="fas fa-rupee-sign"></i>550</h2>
+                    <span> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> </span> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer footer-map">
+  <div class="footer-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 col-sm-6 col-xs-12">
+          <h2>About Us</h2>
+          <hr>
+          <p class="about-lt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer justo lectus, consectetur quis nisi vitae, Nunc eget ultrices ligula.</p>
+          <a href="about.html" class="btn-primary-link more-detail"><i class="fa fa-hand-o-right"></i> Read More</a>
+          <h2>Follow Us</h2>
+          <hr>
+          <ul class="social-icons">
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+            <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
+            <li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12">
+          <h2>Recent Listing</h2>
+          <hr>
+          <ul class="widget-news-simple">
+            <li>
+              <div class="news-thum"><a href="#"><img src="images/new-thum-1.png" alt="new-thum-1"></a></div>
+              <div class="news-text-thum">
+                <h6><a href="listing_detail.html">Hello Directory Listing</a></h6>
+                <p>Phasellus ut condimentum diam, eget tempus lorem...</p>
+                <div>Price: $117</div>
+              </div>
+            </li>
+            <li>
+              <div class="news-thum"><a href="#"><img src="images/new-thum-1.png" alt="new-thum-1"></a></div>
+              <div class="news-text-thum">
+                <h6><a href="listing_detail.html">Hello Directory Listing</a></h6>
+                <p>Phasellus ut condimentum diam, eget tempus lorem...</p>
+                <div>Price: $117</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12">
+          <h2>Useful links</h2>
+          <hr>
+          <ul class="use-slt-link">
+            <li><a href="#"><i class="fa fa-hand-o-right"></i>&nbsp;&nbsp;Privacy &amp; Policy</a></li>
+            <li><a href="#"><i class="fa fa-hand-o-right"></i>&nbsp;&nbsp;Payment Method</a></li>
+            <li><a href="#"><i class="fa fa-hand-o-right"></i>&nbsp;&nbsp;Sitemap</a></li>
+            <li><a href="#"><i class="fa fa-hand-o-right"></i>&nbsp;&nbsp;Support</a></li>
+            <li><a href="#"><i class="fa fa-hand-o-right"></i>&nbsp;&nbsp;Terms &amp; Condition</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12">
+          <h2>Have you any Query?</h2>
+          <hr>
+          <form class="form-alt">
+            <div class="form-group">
+              <input type="text" placeholder="Name :-" required="" class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="text" placeholder="Email :-" required="" class="form-control">
+            </div>
+            <div class="form-group">
+              <textarea placeholder="Message :-" required="" class="form-control"></textarea>
+            </div>
+            <div class="form-group">
+              <button type="submit" class="btn-quote">Send Now</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12">
+          <p class="text-xs-center">Copyright © 2017 All Rights Reserved.</p>
+        </div>
+        <div><a href="#" class="scrollup">Scroll</a></div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!--================================ Login and Register Forms ===========================================--> 
+
+<!-- login form -->
+<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="listing-modal-1 modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h4 class="modal-title" id="myModalLabel"> Login</h4>
+      </div>
+      <div class="modal-body">
+        <div class="listing-login-form">
+          <form action="#">
+            <div class="listing-form-field"> <i class="fa fa-user blue-1"></i>
+              <input class="form-field bgwhite mobile" type="text"  placeholder="Mobile">
+            </div>
+            <div class="listing-form-field"> <i class="fa fa-lock blue-1"></i>
+              <input class="form-field bgwhite password" type="password"  placeholder="Password"><br>
+            </div>
+            <div class="modal-header">
+        <a class="modal-title " data-toggle="modal" data-target="#login" id="myModalLabel" href="">Login via otp</a>
+
+      </div>  
+            <br><div class="listing-form-field"> <i class="fa fa-lock blue-1"></i>
+              <input class="form-field bgwhite otp" type="password"  placeholder="OTP"><br>
+            </div>
+
+            <div class="listing-form-field clearfix margin-top-20 margin-bottom-20">
+              <a class="send_otp" href="#">Send Otp</a> </div>
+              
+            <div class="listing-form-field">
+              <input class="submit" type="submit" value="login">
+            </div>
+          </form>
+          <div class="bottom-links">
+            <p>Not a Member?<a href="#">Create Account</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- registration form -->
+<div class="modal fade" id="register" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="listing-modal-1 modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h4 class="modal-title" id="myModalLabel2">Registration</h4>
+      </div>
+      <div class="modal-body">
+        <div class="listing-register-form">
+          <form action="edit_profile.html" id="regist_form">
+            <div class="listing-form-field"> <i class="fas fa-user blue-1"></i>
+              <input class="form-field bgwhite" id="name_regist" type="text"  placeholder="Name" required minlength="5">
+            </div>
+            <div class="listing-form-field"> <i class="fas fa-envelope blue-1"></i>
+              <input class="form-field bgwhite" id="email_regist"  placeholder="Email" required type="email" >
+            </div>
+             <div class="listing-form-field"> <i class="fas fa-mobile-alt blue-1"></i>
+              <input class="form-field bgwhite" id="phone_regist" placeholder="Phone Number"  required minlength="10" maxlength="10">
+            </div>
+            <div class="listing-form-field"> <i class="fas fa-lock blue-1"></i>
+              <input class="form-field bgwhite" id="pass_regist" type="password"  placeholder="Password" minlength="8">
+            </div>
+            <div class="listing-form-field"> <i class="fas fa-lock blue-1"></i>
+              <input class="form-field bgwhite" id="cnfrm_pass_regist" type="password"  placeholder="Confirm Password" equalTo="#pass_regist">
+            </div>
+            <div class="listing-form-field clearfix margin-top-20 margin-bottom-20 login_form_text_center">
+              <input type="checkbox" id="checkbox-1-2" class="regular-checkbox">
+              <label for="checkbox-1-2">
+              </label>
+              <label class="checkbox-lable">i agree with</label> &nbsp; <a href="#">Terms &amp; Conditions</a> </div>
+            <div class="listing-form-field">
+              <input class="submittt" id="registration" type="submit" value="create account">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Scripts --> 
+
+<script src="js/jquery-2.2.4.min.js"></script> 
+<script src="js/register.js"></script>
+<script src="js/bootstrap.min.js"></script> 
+<script src="js/waypoints.js"></script> 
+<script src="js/jquery_counterup.js"></script> 
+<script src="js/jquery_custom.js"></script> 
+<script src="js/homemap_custom.js"></script> 
+<script src="js/log_in.js"></script> 
+<script src="js/otp.js"></script> 
+<script src="js/basic.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+<script src="js/jquery-validation/jquery.validate.min.js"></script>
+ <script>
+$("#regist_form").validate({
+  rules: {
+    phone_regist: {
+      required: true,
+      phoneUS: true,
+      digits: true
+    }
+  }
+
+
+
+
+});
+$( "#registration" ).click(function( event ) {
+  event.preventDefault();
+});
+</script>        
+        
+
+
+
+
+<!-- <script src="js/jquery-validation/jquery.validate.min.js"></script>
+<script>
+$("#regist_form").validate();
+</script> -->
+<!-- <script src="js/register_validation.js"></script>  -->
+
+
+
+
+</body>
+
+</body>
+</html>
